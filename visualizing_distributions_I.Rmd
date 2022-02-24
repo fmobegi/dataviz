@@ -22,7 +22,6 @@ age_hist <- data.frame(
   count = age_counts,
   check.names = FALSE
 )
-
 age_hist_display <- rename(
   age_hist,
   `Age range` = `age range`,
