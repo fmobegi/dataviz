@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 ```{r echo = FALSE, message = FALSE}
 # run setup script
 source("_common.R")
@@ -135,6 +140,8 @@ p2_log <- ggplot(US_census, aes(x=log10(pop2010))) +
   theme(plot.margin = margin(3, 1.5, 12, 1.5))
 
 plot_grid(p1_log, p2_log, ncol = 1, align = 'v', labels = 'auto')
+p1_log/p2_log
+
 ```
 
 To see that this distribution is not a power law, we plot it as a descending ecdf with logarithmic *x* and *y* axes. In this visualization, a power law appears as a perfect straight line. For the population counts in counties, the right tail forms almost but not quite a straight line on the descending log-log ecdf plot (Figure \@ref(fig:county-populations-tail-log-log)).
